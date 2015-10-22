@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1、jquery插件学习制作</title>
+</head>
+<body>
+<div id="demo">
+	学习jquery插件制作
+</div>
+
+<script src="../../pkgs/jquery/jquery.js"></script>
+<script>
+(function($){
+	var defaults = {
+		prevId: 'prevBtn',
+		prevText: 'previous',
+		nextId: 'nextBtn',
+		nextText: 'next'
+	};
+	
+	var showLink = function(obj,link){
+		$(obj).append(function(){
+			return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+		}); 
+	}
+
+	$.fn.easySlider = function(options){
+		var options = $.extend(defaults, options);
+		return this.each(function(){
+			showLink(this,options.prevId);
+		});
+	}
+})(jQuery);
+
+(function($){
+	var options = {
+		prevId: 'http://www.cnblogs.com/xcj26/p/3345556.html'
+	};
+	$('#demo').easySlider(options);
+})(jQuery);
+</script>
+</body>
+</html>
