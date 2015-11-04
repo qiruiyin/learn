@@ -1,0 +1,28 @@
+.block {
+	position: relative;
+	height: 30px;
+	width: 10px;
+	background-color: red;
+	line-height: 30px;
+	overflow: hidden;
+	margin-top: 100px;
+}
+
+p {
+	line-height: 30px;
+	margin: 0 auto;
+}
+
+.first{
+	animation: demo 6s infinite linear;
+	/*animation-delay: 1s; */
+}
+
+@keyframes demo {
+	from {
+		margin-top: 0;
+	}
+	to {
+		margin-top: -300px;
+	}
+}
