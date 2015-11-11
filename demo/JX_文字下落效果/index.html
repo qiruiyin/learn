@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JX团队非常好的文字下落效果</title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+	<h1></h1>
+	
+	<div id="frm"></div> 
+	<form id="mtxform" name="mtxform"> 
+		<span id="inputext" class="hidden"> 
+			<textarea rows="6" cols="46" id="text" name="text"> 
+			这是JX团队做的
+			文字下落的效果，非常赞
+			支持中英文，在这里收藏一下
+			</textarea>
+		</span> 
+	</form>
+
+<script src="./index.js"></script>
+<script type="text/javascript"> 
+onload = function () { 
+  document.getElementById('frm').style['height'] = document.documentElement.clientHeight + 160 + 'px';
+  mtx.init("frm", 800, 150, [255,255,255], [255,64,0], [44,44,44]); 
+} 
+</script> 
+</body>
+</html>
