@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+.container{ width: 96%; padding-top: 20px;}
+/*信息展示start*/
+
+/*辅助类start*/
+.hide { display: none; }
+.show { display: block; }
+.small { width: 150px; } /*主要是针对搜索模块的输入框*/ 
+.font-color-red { color: red; }
+.left { float: left; }
+.right { float: right; }
+/*辅助类end*/
+
+/*详情展示start*/
+.table th, .table td{
+	vertical-align: middle;
+}
+table.table.msg td {
+  width: 36%;
+}
+.table td input, .table td textarea {
+  margin-right: 5px;
+}
+/*操作按钮*/
+table.table td.status-view a {
+  display: inline-block;
+  margin-right: 4px;
+}
+table.table.msg.msg2 td {
+  width: auto;
+}
+table.table.msg td.odd {
+  width: 140px;
+  /*background-color: #f9f9f9;*/
+}
+table.table.msg td input {
+  margin: 0 auto;
+}
+.table-detail-msg {
+  display: none;
+  background-color: #faebd7;
+}
+.table-details tr.active{
+   background-color: #f5f5f5;
+}
+.table-detail-show i{
+	display: block;
+	width: 17px;
+	height: 23px;
+	background: url('../images/collapse.gif');
+	cursor: pointer;
+}
+.table-detail-show i.expand{
+   background: url('../images/expand.gif');
+}
+.table-detail-msg .table {
+   margin-bottom: 0;
+}
+/*详情展示end*/
+
+/*分页start*/
+.pagination > .pagination {
+	margin-top: 0;
+}
+/*分页end*/
+
+/*搜索块start*/
+.search, .search form, .search form p{
+	margin-bottom: 0;
+}
+.search .form-inline input,
+.search .form-inline label,
+.search .form-inline select,
+.search .form-inline .btn,
+.search > .btn,
+.search > p,
+.search .form-inline .btn-group {
+	vertical-align: middle;
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+.search .form-inline label {
+	margin-right: 0;
+}
+.search .form-inline label.checkbox {
+	height: 22px;
+}
+.search .btn-group .btn {
+	margin-bottom: 0;
+}
+/*搜索框end*/
+
+/*修改密码start*/
+.pwd {
+  position: relative;
+  margin: 10px;
+}
+
+.pwd label{
+  display: inline-block;
+  width: 70px;
+}
+
+.pwd input {
+	padding: 5px 6px;
+	height: 20px;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+.pwd .pwd-show {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: auto;
+  line-height: 32px;
+  padding: 0 6px;
+  background: #999;
+  color: #fff;
+  cursor: pointer;
+}
+/*修改密码end*/
+
+/*upload插件start*/
+.add-img-btn {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.upload-btn {
+	width: 32px;
+	height: 32px;
+	/*背景换成图片就好了*/
+	background: url('../images/upload.jpg') no-repeat;
+	display: inline-block;
+}
+/*upload插件end*/
+
+/*底部start*/
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 520px;
+}
+
+.footer li {
+  display: inline-block;
+  padding: 18px 20px;
+  background-color: #eee;
+  border-left: 1px solid #999;
+  margin-left: -4px;
+}
+
+.footer li:first-child {
+  border-left: 0;
+}
+/*底部end*/
+
+/*折叠头部start*/
+ul.accordion-toggle {
+	margin: 0 auto;
+}
+ul.accordion-toggle li {
+	display: inline-block;
+	margin-right: 5px;
+}
+/*折叠头部end*/
+
+/*layer start*/
+.layui-layer-btn {
+  background: #eaeaea;
+}
+/*layer end*/
+
+/*首页start*/
+.user {
+	margin-bottom: 20px;
+}
+.user img {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+.user p {
+	margin-left: 60px;
+	margin-top: -50px;
+	font-size: 20px;
+}
+.box {
+	margin-left: 60px;
+}
+.box-btn {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.news {
+	width: 620px;
+}
+.news-title {
+	font-size: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.news-msg {
+	border-bottom: 1px solid #f1f1f1;
+}
+.news-msg-title {
+	margin: 10px 0 0;
+}
+
+.block {
+}
+
+.block-title {
+	line-height: 2;
+	text-indent: 20px;
+	font-size: 20px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.block-content {
+	padding: 10px;
+}
+.block p {
+	display: inline-block;
+	margin-right: 20px;
+	color: #666;
+}
+.block p {
+	color: #333;
+}
+.block-msg {
+	line-height: 2.5;
+}
+.block-msg a {
+	margin-right: 10px;
+}
+/*首页end*/
+.data-required {color:red;}
+
+/*常用颜色定义*/
+.red{color: red;}
+.yellow{color: yellow;}
+.green{color: green;}
+.bts-success{color: #5bb75b;}/*bootstrap success 颜色*/
+.bts-primary{color: #006dcc;}/*bootstrap primary 颜色*/
+.bts-danger{color: #da4f49;}/*bootstrap danger 颜色*/
+
+
+
+
