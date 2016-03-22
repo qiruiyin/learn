@@ -1,6 +1,7 @@
 html,body {
 	width: 100%;
 	height: 100%;
+	background-color: #999;
 }
 
 .demo {
@@ -13,66 +14,29 @@ html,body {
 	margin-top: -25px;
 	margin-left: -25px;
 	text-align: center;
-	line-height: 50px; 
+	line-height: 50px;
 }
 
 .nav {
 	position: absolute;
 	top: 0;
-	right: 25px;
-	width: 0;
+	right: 0;
+	width: 50px;
 	height: 50px;
-	background-color: red;
 
-	z-index: -3;
+	z-index: 1;
+	border-radius: 50px;
+	background: none;
 }
+
 .nav.active {
-	animation: big 1s 1;
-	animation-fill-mode:forwards;
-}
-.nav.active1 {
-	animation: small 1s 1;
-	animation-fill-mode:forwards;
-}
-
-@keyframes big {
-	from{
-		width: 0;
-	}
-	to {
-		width: 300px;
-	}
-}
-
-@keyframes small {
-	from{
-		width: 300px;
-	}
-	to {
-		width: 0;
-	}
-}
-
-.nav.active:before, .nav.active:after,
-.nav.active1:before, .nav.active1:after {
-	content: '';
-	position: absolute;
-	left: -25px;
-	width: 25px;
-	height: 50px;
-	background-color: red;
-	-webkit-border-radius: 50px 0 0 50px;
-}
-
-.nav.active:after,
-.nav.active1:after {
-	left: 100%;
-	width: 25px;
-	height: 50px;
-	-webkit-border-radius: 0 25px 25px 0;
+	background: rgba(255, 255, 255, .7);
 }
 
 .icon {
+	position: absolute;
+	top: 0;
+	right: 0;
 	width: 40px;
 	height: 40px;
   margin-top: 5px;
@@ -82,30 +46,75 @@ html,body {
 	background-repeat: no-repeat;
 	background-color: green;
 	border-radius: 20px;
-	display: none;
 }
 
 .icon1 {
+	right: 250px;
+	animation-delay: 1s;
+	background-color: #6dc96e;
 	background-image: url('./images/icon1.png');
 }
 .icon2 {
+	right: 200px;
+	animation-delay: .8s;
+	background-color: #ffb323;
 	background-image: url('./images/icon2.png');
 }
 .icon3 {
+	right: 150px;
+	animation-delay: .6s;
+	background-color: #ff784d;
 	background-image: url('./images/icon3.png');
 }
 .icon4 {
+	right: 100px;
+	animation-delay: .4s;
+	background-color: #51a9ff;
 	background-image: url('./images/icon4.png');
 }
 .icon5 {
+	right: 50px;
+	animation-delay: .2s;
+	background-color: #d779bf;
 	background-image: url('./images/icon5.png');
 }
 
-/*.animated {
+.animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+	animation-fill-mode:forwards;
+	opacity: 0;
+	display: inline-block;
+}
+
+.zoomIn {
+	-webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
+
+.icon1.zoomOut { animation-delay: 0s; }
+.icon2.zoomOut { animation-delay: .1s; }
+.icon3.zoomOut { animation-delay: .3s; }
+.icon4.zoomOut { animation-delay: .5s; }
+.icon5.zoomOut { animation-delay: .7s; }
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn {
@@ -114,28 +123,59 @@ html,body {
     -webkit-transform: scale3d(.3, .3, .3);
     transform: scale3d(.3, .3, .3);
   }
-  50% {
+  50%, 100% {
     opacity: 1;
   }
 }
-*/
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .circle {
 	position: absolute;
-	top: 24px;
-	right: 24px;
-	width: 2px;
-	height: 2px;
-	background-color: yellow;
-	border-radius: 2px;
-	z-index: -2;
+	top: 18px;
+	right: 17px;
+	width: 15px;
+	height: 15px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 18px;
+	z-index: 2;
 
 	transform: scale(1);
 	transition: 1s;
-	transition-delay: .4s; 
 }
 
-.circle.active {
-	transform: scale(22);
+.demo.active .circle {
+	transform: scale(2.5);
 }
 
 .rotate {
@@ -146,12 +186,20 @@ html,body {
 	height: 30px;
 	background: url('./images/rote1.png');
 	background-size: contain;
-	z-index: -1;
+	z-index: 3;
 
 	transform: rotate(0);
 	transition: 1s;
 }
 
-.rotate.active {
-	transform: rotate(-750deg);
+.demo.active .rotate {
+	transform: rotate(-540deg);
+}
+
+.m {
+	position: absolute;
+	right: 0;
+	width: 50px;
+	color: #fff;
+	z-index: 4;
 }

@@ -1,0 +1,25 @@
+
+组件：http://docs.sencha.com/extjs/4.2.1/颜色定义（大小定义最好不要定义）
+
+1、使用方式
+		http://blog.csdn.net/sushengmiyan/article/details/38313537
+	
+2、修改主题
+		http://ju.outofmemory.cn/entry/49081
+		http://www.cnblogs.com/happyframework/p/3361706.html
+		http://www.th7.cn/web/js/201311/14931.shtml
+		http://www.cnblogs.com/niejunchan/p/5009179.html
+
+环境搭建
+1、安装ruby : 
+		下载http://rubyinstaller.org/
+		安装compass: gem install compass ,(成功安装可以查看compass -v)
+		安装sass: gem install sass ,(成功安装可以查看sass -v)
+2、安装java环境：
+		下载jdk和jre: http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
+		环境配置： http://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html
+3、安装sencha-cmd：
+		下载http://www.sencha.com/products/extjs/cmd-download/
+4、下载需要的extjs版本，
+
+5、按照http://ju.outofmemory.cn/entry/49081

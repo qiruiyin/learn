@@ -1,31 +1,34 @@
 (function(){
-	var aniEndName = (function() {
-      var eleStyle = document.createElement('div').style;
-      var verdors = ['a', 'webkitA', 'MozA', 'OA', 'msA'];
-      var endEvents = ['animationend', 'webkitAnimationEnd', 'animationend', 'oAnimationEnd', 'MSAnimationEnd'];
-      var animation;
-      for (var i = 0, len = verdors.length; i < len; i++) {
-        animation = verdors[i] + 'nimation';
-        if (animation in eleStyle) {
-            return endEvents[i];
-        }
-      }
-      return 'animationend';
-  }());
+
+	var w_max = '300px',
+			w_min = '50px',
+			status = 1,
+			start = 1;
 
 	$('.demo').on('click', function(){
-		$('.rotate').toggleClass('active');
-		$('.circle').toggleClass('active');
-		if($('.nav').width() > 99) {
-			$('.icon').hide();
-			$('.nav').addClass('active1').removeClass('active');
-		} else {
-			$('.nav').addClass('active').removeClass('active1');
-		}
-	});
+		var dom_nav = $('.nav'),
+				dom_icon = $('.icon');
+		$(this).toggleClass('active');
 
-	$('.nav').on(aniEndName, function(){
-		$(this).hasClass('active1') ? $(this).removeClass('active1') : '';
-		$('.nav').width() > 99 ? $('.icon').css('display', 'inline-block') : '';
+		if(status && start){
+			dom_nav.addClass('active');
+			dom_nav.animate({width: w_max}, 1000);
+			dom_icon.addClass('zoomIn');
+			setTimeout(function(){
+				$('.icon').css('opacity', 1);
+				start = 0;
+			}, 1000);
+			status = 0;
+		} else if(!status && !start){
+			dom_nav.animate({width: w_min}, 1000);
+			dom_icon.addClass('zoomOut');
+			setTimeout(function(){
+				dom_nav.removeClass('active');
+				dom_icon.removeClass('zoomIn zoomOut');
+				dom_icon.css('opacity', 0);
+				start = 1;
+			}, 1000);
+			status = 1;
+		}
 	});
 })();
