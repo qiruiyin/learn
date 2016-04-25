@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	line-height: 80px;
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	background-color: #D35400;
+}
+
+.demo {
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid red;
+	display: inline-block;
+}
+
+/*demo1*/
+.demo1 {
+	overflow: hidden;
+}
+
+.demo1 aside {
+	float: left;
+	width: 150px;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.demo1 main {
+	float: left;
+	width: 350px;
+	padding-bottom: 2000px;
+	margin-bottom: -2000px;
+	background-color: rgba(255, 0, 0, .3);
+}
+
+/*demo2*/
+.demo2 {
+	overflow: hidden;
+}
+
+.demo2 .wrap {
+	position: relative;
+	float: left;
+	width: 100%;
+	background-color: green;
+}
+
+.demo2 .mainWrap {
+	right: 150px;
+	background-color: orange;
+}
+
+.demo2 .leftWrap {
+	right: 200px;
+	background-color: lime;
+}
+
+.demo2 aside, .demo2 main {
+	position: relative;
+	float: left;
+	width: 150px;
+	overflow: hidden;
+	left: 350px;
+}
+
+.demo2 main {
+	width: 200px;
+}
+
+/*demo3*/
+.demo3 {
+	background-color: #ffe3a6;
+}
+
+.demo3 .wraper{
+	position: relative;
+	border-left: 150px solid #d4c376;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.demo3 aside, .demo3 main {
+	padding-bottom: 2em;
+}
+
+.demo3 aside {
+	position: relative;
+	float: left;
+	width: 150px;
+	margin-left: -150px;
+	margin-right: -1px;
+	border-right: 1px solid red;
+}
+
+.demo3 main {
+	float: left;
+	border-left: 1px solid red;
+}
+
+/*demo4*/
+.demo4 {
+
+}
+
+.demo4 .wraper	{
+	float: left;
+	width: 200px;
+	border-left: 150px solid #0f0;
+	border-right: 150px solid #0f0;
+	background-color: #0ff;
+	margin: 0 auto;
+}
+
+.demo4 .left {
+	position: relative;
+	float: left;
+	width: 150px;
+	margin-left: -150px;
+}
+
+.demo4 .right {
+	position: relative;
+	float: right;
+	width: 150px;
+	margin-right: -150px;
+	z-index: 100;
+}
+
+.demo4 main {
+	float: left;
+	width: 200px;
+	margin-right: -200px;
+}
+
+/*demo5*/
+.demo5 {
+
+}
+
+.demo5 .table {
+	width: auto;
+	min-width: 500px;
+	margin: 0 auto;
+	padding: 0;
+	display: table;
+}
+
+.demo5 .row {
+	display: table-row;
+}
+
+.demo5 .cell {
+	display: table-cell;
+	width: 33%;
+}
+
+.demo5 .cell-left {
+	background-color: #f00;
+}
+
+.demo5 .cell-main {
+	background-color: #0f0;
+}
+
+.demo5 .cell-right {
+	background-color: #00f;
+}
