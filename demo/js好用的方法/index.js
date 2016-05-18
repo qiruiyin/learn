@@ -13,3 +13,15 @@
     return result; 
 	}
 
+2、add(1)(2)(3)(4) 方法
+	function add(x) {
+    var sum = x;
+    var tmp = function (y) {
+        sum = sum + y;
+        return tmp;
+    };
+    tmp.toString = function () {
+        return sum;
+    };
+    return tmp;
+	}
