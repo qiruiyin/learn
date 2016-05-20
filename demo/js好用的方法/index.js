@@ -25,3 +25,6 @@
     };
     return tmp;
 	}
+  
+3、淘宝flexible布局js(手机端rem布局)
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
