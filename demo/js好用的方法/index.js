@@ -3,6 +3,31 @@
 	对象深拷贝
 	$.extend(true, {}, object);
 
+deepCopy = function(source) {
+  let result;
+  if (Array.isArray(source)) {
+    result = [];
+    if(source.length > 0) {
+      result = source.map(item => {
+        return item instanceof Object ? Vue.prototype.deepCopy(item) : item;
+      })
+    }
+  } else if(source instanceof Object) {
+    result = {};
+    for (let key in source) {
+      if(source[key] instanceof Object) {
+        result[key] = Vue.prototype.deepCopy(source[key])
+      } else  {
+        result[key] = source[key];
+      }
+    }  
+  } else {
+    result = source;    
+  }
+
+  return result; 
+}
+
 	// 尾递归方法 Array 改为Object就是对象深拷贝
 	function deepCopy(source){
 		// 数组深拷贝
